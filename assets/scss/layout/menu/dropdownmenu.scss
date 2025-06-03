@@ -1,0 +1,238 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.5 mobilemenu css
+/*----------------------------------------*/
+
+.tp-main{
+    &-menu{
+        & ul{
+            & li{
+                position: relative;
+                & .submenu {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    min-width: 220px;
+                    padding: 15px 25px 17px 25px;
+                    background: var(--tp-common-white);
+                    transition: all 0.3s ease-out;
+                    display: block;
+                    z-index: 6;
+                    border-top: 3px solid var(--tp-theme-secondary);
+                    transform: scaleY(0);
+                    transform-origin: top center;
+                    box-shadow: 0px 10px 30px 0px rgba(25, 25, 26, 0.1);
+                    visibility: hidden;
+                    & li{
+                        display: block;
+                        margin: 0;
+                        & a{
+                            padding: 8px 0px;
+                            display: block;
+                            transition: all 0.5s ease;
+                            text-transform: capitalize;
+                            text-align: left;
+                            position: relative;
+                            font-size: 15px;
+                        }
+                        & .submenu {
+                            right: -132%;
+                            left: inherit;
+                            top: 0;
+                        }
+                    }
+                }
+                &:hover{
+                    & > a{
+                        color: var(--tp-green-2);
+                    }
+                }
+                &:hover >{
+                    & .submenu{
+                        transform: scaleY(1);
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        &-home{
+            & nav{
+                & ul{
+                    & li{
+                        &:hover{
+                            & > a{
+                                color: var(--tp-theme-04);
+                            }
+                        }
+                        & .tp-submenu.submenu.has-homemenu .homemenu-title a:hover {
+                            color: var(--tp-theme-04);
+                        }
+                    }
+                }
+            }
+        }
+        & ul{
+            & li{
+                & .tp-submenu.submenu.has-homemenu {
+                    width: 1170px;
+                    padding: 30px 30px 10px 30px;
+                    background-color: var(--tp-common-white);
+                    box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    @media #{$xl} {
+                        width: 1000px;
+                    }
+                    @media #{$lg} {
+                        width: 680px;
+                    }
+                    & .homemenu {
+                        position: relative;
+                        padding: 0px 10px;
+                        margin-bottom: 20px;
+                        &-thumb{
+                            position: relative;
+                            margin-bottom: 3px;
+                            & img{
+                                width: 100%;
+                            }
+                            &::before{
+                                position: absolute;
+                                content: '';
+                                top: 0;
+                                left: 0;
+                                height: 100%;
+                                width: 100%;
+                                background: rgba(38, 34, 33, 0.1);
+                                transition: all 0.3s 0s ease-out;
+                            }
+                            &:hover{
+                                & .homemenu-btn {
+                                    transform: translateY(-50%);
+                                    opacity: 1;
+                                    visibility: visible;
+                                    & .menu-btn{
+                                        &::before{
+                                            display: none;
+                                        }
+                                        &.show{
+                                            &-1{
+                                                transform: translateY(0);
+                                            }
+                                            &-2{
+                                                transform: translateY(0);
+                                            }
+                                        }
+                                    }
+                                  }
+                                  &::before{
+                                    opacity: 1;
+                                  }
+                            }
+                        }
+                        &-title{
+                            & a{
+                                padding: 0;
+                                font-size: 16px;
+                                font-weight: 600;
+                                color: var(--tp-common-black);
+                                &::before{
+                                    width: 0;
+                                }
+                                &:hover{
+                                    color: var(--tp-green-2);
+                                    &::before{
+                                        width: 0;
+                                    }
+                                }
+                            }
+                        }
+                        &-btn{
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            right: 0;
+                            text-align: center;
+                            transform: translateY(-40%);
+                            transition: all 0.3s 0s ease-out;
+                            opacity: 0;
+                            & .menu-btn {
+                                position: relative;
+                                font-size: 14px;
+                                text-transform: uppercase;
+                                padding: 10px 20px;
+                                width: 128px;
+                                overflow: hidden;
+                                color: var(--tp-common-white);
+                            }
+                        }
+                      }
+                
+                    &.home{
+                        &-2{
+                            @media #{$xxl} {
+                                left: -110px;
+                            }
+                            @media #{$xl} {
+                                left: -250px;
+                            }
+                        }
+                        &-3{
+                            @media #{$x3l} {
+                                left: -250px;
+                            }
+                            @media #{$xxl,$xl} {
+                                left: -300px;
+                            }
+                        }
+                        &-4{
+                            @media #{$xl} {
+                                left: -295px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-health{
+            & nav ul li .tp-submenu.submenu.has-homemenu .homemenu-title a:hover {
+                color:  var(--tp-theme-06);
+            }
+            & nav ul li:hover > a {
+                color:  var(--tp-theme-06);
+            }
+        }
+        &-care{
+            & nav ul li .tp-submenu.submenu.has-homemenu .homemenu-title a:hover {
+                color:  var(--tp-theme-08);
+            }
+        }
+        &-pet{
+            & ul li .tp-submenu.submenu.has-homemenu .homemenu-title a:hover {
+                color:  var(--tp-theme-10);
+            }
+            & nav ul li:hover > a {
+                color:  var(--tp-theme-10);
+            }
+        }
+        &-travel{
+            & nav ul li .tp-submenu.submenu.has-homemenu .homemenu-title a:hover {
+                color:  var(--tp-theme-12);
+            }
+            & nav ul li:hover > a {
+                color:  var(--tp-theme-12);
+            }
+        }
+        &-mrg{
+            & nav ul li .tp-submenu.submenu.has-homemenu .homemenu-title a:hover {
+                color:  var(--tp-theme-13);
+            }
+            & nav ul li:hover > a {
+                color:  var(--tp-theme-13);
+            }
+        }
+    }
+}

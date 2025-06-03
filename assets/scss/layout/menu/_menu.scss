@@ -1,0 +1,218 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.3 menu css
+/*----------------------------------------*/
+
+.tp-main{
+    &-menu{
+        margin-left: 10px;
+        & nav{
+            & ul{
+                & li{
+                    display: inline-block;
+                    &:not(:last-child){
+                        margin-right: 38px;
+                        @media #{$xxl}{
+                            margin-right: 37px;
+                        }
+                    }
+                    & a{
+                        line-height: 20px;
+                        color: var(--tp-grey-1);
+                        font-weight: 700;
+                        padding: 40px 0;
+                        display: inline-block;
+                        font-family: var(--tp-ff-common);
+                        &:hover{
+                            color:  var(--tp-theme-primary);
+                        }
+                        &.active{
+                            color:  var(--tp-theme-primary);
+                        }
+                    }
+                }
+            }
+        }
+        &-home{
+            & nav{
+                & ul{
+                    & li{
+                        & a{
+                            color: var(--tp-grey-8);
+                            &:hover{
+                                color: var(--tp-theme-04);
+                            }
+                            &.active{
+                                color: var(--tp-theme-04);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-bar{
+            float: right;
+            cursor: pointer;
+            & span{
+                width: 30px;
+                height: 2px;
+                background-color: var(--tp-common-black);
+                display: block;
+                cursor: pointer;
+                &:not(:last-child){
+                    margin-bottom: 9px;
+                }
+            }
+        }
+        &-business{
+            margin-left: 0;
+            & nav{
+                & ul{
+                    & li{
+                        & a{
+                            color: var(--tp-common-white);
+                            padding: 20px 0;
+                            &.active {
+                                color: var(--tp-theme-secondary);
+                            }
+                        }
+                        &:hover > a{
+                            color: var(--tp-theme-secondary);
+                        }
+                        & .tp-submenu.submenu.has-homemenu .homemenu-title a:hover {
+                            color: var(--tp-theme-secondary);
+                        }
+                        & .submenu {
+                            & li{
+                                & a{
+                                    color: var(--tp-common-black);
+                                }
+                                &:hover > a{
+                                    color: var(--tp-theme-secondary);
+                                }
+                            }
+                        }
+                        & .tp-submenu.submenu.has-homemenu {
+                            & .homemenu-title {
+                                & a{
+                                    color: var(--tp-common-black);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-health{
+            margin-left: 25px;
+            & nav{
+                & ul{
+                    & li{
+                        & a{
+                            color: var(--tp-grey-15);
+                            &:hover{
+                                color:  var(--tp-theme-06);
+                            }
+                            &.active{
+                                color:  var(--tp-theme-06);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-care{
+            margin-left: 30px;
+            @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+                margin-left: 0;
+            }
+            & nav{
+                & ul{
+                    & li{
+                        & a{
+                            color: var(--tp-grey-16);
+                            &.active{
+                                color: var(--tp-theme-08);
+                            }
+                        }
+                        &:hover > a{
+                            color: var(--tp-theme-08);
+                        }
+                    }
+                }
+            }
+        }
+        &-pet{
+            margin-left: 32px;
+            @media #{$x3l,$xxl,$xl,$lg,$md,$sm,$xs}{
+                margin-left: 0;
+            }
+            &-spacing{
+                padding: 0 105px;
+                @media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+                    padding: 0;
+                }
+            }
+            & nav{
+                & ul{
+                    & li{
+                        &:not(:last-child){
+                            @media #{$x3l,$xxl,$xl,$lg,$md,$sm,$xs}{
+                                margin-right: 35px;
+                            }
+                        }
+                        & a{
+                           color: #01313d; 
+                            &:hover{
+                                color:  var(--tp-theme-10);
+                            }
+                            &.active{
+                                color:  var(--tp-theme-10);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-travel{
+            margin-left: 47px;
+            @media #{$xl,$lg,$md,$sm,$xs}{
+                margin-right: 0;
+            }
+            & nav{
+                & ul{
+                    & li{
+                        & a{
+                            &:hover{
+                                color:  var(--tp-theme-12);
+                            }
+                            &.active{
+                                color:  var(--tp-theme-12);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-mrg{
+            margin-left: 0;
+            & nav{
+                & ul{
+                    & li{
+                        & a{
+                            padding: 30px 0;
+                            color: var(--tp-grey-17);
+                            &:hover{
+                                color:  var(--tp-theme-13);
+                            }
+                            &.active{
+                                color:  var(--tp-theme-13);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

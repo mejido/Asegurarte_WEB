@@ -1,0 +1,183 @@
+@use '../utils' as *;
+/*---------------------------------
+    1.3 Default Spacing
+---------------------------------*/
+
+.section-plr{
+    padding-left: 45px;
+    padding-right: 45px;
+    @media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+        padding-left: 0;
+        padding-right: 0; 
+    }
+    &-2{
+        padding-left: 85px;
+        padding-right: 85px;
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+            padding-left: 0;
+            padding-right: 0; 
+        }
+    }
+    &-3{
+        margin-left: 100px;
+        margin-right: 100px;
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &-4{
+        margin-left: -100px;
+        margin-right: -100px;
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+.tp-travel-space{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    @media #{$lg,$md,$sm,$xs}{
+        padding: 20px 0;
+    }
+}
+.tp-slider-space{
+    padding: 200px 0;
+    @media #{$md,$sm,$xs} {
+        padding-top: 120px;
+        padding-bottom: 0;
+    }
+}
+.tp-slider-space2{
+    padding-top: 210px;
+    padding-bottom: 195px;
+    @media #{$md,$sm,$xs} {
+        padding-top: 120px;
+        padding-bottom: 110px;
+    }
+}
+.gx-20 {
+    --bs-gutter-x: 20px;
+}
+.gy-20 {
+    --bs-gutter-y: 20px;
+}
+.pt-145{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-top: 100px;
+    }
+}
+.pt-140{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-top: 100px;
+    }
+}
+.pt-135{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-top: 95px;
+    }
+}
+.pt-130{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-top: 90px;
+    }
+}
+.pt-125{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-top: 85px;
+    }
+}
+.pt-120{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-top: 80px;
+    }
+}
+.pt-115{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-top: 75px;
+    }
+}
+.pt-110{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-top: 70px;
+    }
+}
+.pt-105{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-top: 65px;
+    }
+}
+.pt-100{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-top: 60px;
+    }
+}
+.pb-140{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 100px;
+    }
+}
+.pb-135{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 95px;
+    }
+}
+.pb-130{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 90px;
+    }
+}
+.pb-125{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 85px;
+    }
+}
+.pb-120{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 80px;
+    }
+}
+.pb-115{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 75px;
+    }
+}
+.pb-110{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 70px;
+    }
+}
+.pb-105{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 65px;
+    }
+}
+.pb-100{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 60px;
+    }
+}
+.pb-95{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 55px;
+    }
+}
+.pb-90{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 50px;
+    }
+}
+.tp-about-area-spacing{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 30px;
+    }
+}
+.tp-brands-area-spacing{
+    @media #{$lg,$md,$sm,$xs} {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+}

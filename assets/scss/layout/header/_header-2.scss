@@ -1,0 +1,49 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.2 Header Style 2
+/*----------------------------------------*/
+.tp-header {
+    &-family{
+        background: var(--tp-theme-03);
+        border-bottom: 1px solid var(--tp-green-7);
+    }
+    &-tel{
+        &-family{
+            & span{
+                color: var(--tp-blue-5);
+                background: var(--tp-common-white);
+                &:after{
+                    background: var(--tp-yellow-2);
+                }
+            }
+        }
+        &-box{
+            &-family{
+                border-right: 1px solid var(--tp-green-7);
+            }
+        }
+        &-text{
+            &-family{
+                & a{
+                    color: var(--tp-common-black);
+                    &:hover{
+                        color: var(--tp-yellow-2);
+                    }
+                }
+                & span{
+                    color: var(--tp-grey-3);
+                }
+            }
+        }
+    }
+    &-search{
+        &-family{
+            & button{
+                color: var(--tp-common-black);
+                &:hover{
+                    color: var(--tp-yellow-2);
+                }
+            }
+        }
+    }
+}

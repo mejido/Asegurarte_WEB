@@ -1,0 +1,144 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.13 search
+/*----------------------------------------*/
+.tp-search{
+    &-body{
+        &-overlay{
+            background-color: rgba(0,0,0, .7);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 99;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: all 0.3s 0s ease-out;
+            -moz-transition: all 0.3s 0s ease-out;
+            -ms-transition: all 0.3s 0s ease-out;
+            -o-transition: all 0.3s 0s ease-out;
+            transition: all 0.3s 0s ease-out;
+            backdrop-filter: blur(15px);
+            &.active{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    &-form{
+        &-toggle {
+            background-color: var(--tp-common-white);
+            text-align: start;
+            position: fixed;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            top: 0;
+            width: 100%;
+            box-shadow: rgba(5, 13, 54, 0.05) 5px 15px 30px 0px;
+            transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            z-index: 999999;
+            padding: 150px 30px;
+            transform: translateY(-100%);
+            &.active{
+                transform: translateY(0);
+                & .tp-search-form form{
+                    transform: scaleX(1);
+                    -webkit-transition-delay: 300ms;
+                    -moz-transition-delay: 300ms;
+                    -ms-transition-delay: 300ms;
+                    -o-transition-delay: 300ms;
+                    transition-delay: 300ms;
+                }
+            }
+        }
+    }
+    &-form{
+        text-align: center;
+        & form{
+            transform: scaleX(0);
+            transition: all 600ms;
+            position: relative;
+        }
+        & h4{
+            font-size: 18px;
+            color: var(--tp-common-black);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 35px;
+        }
+        & input{
+            padding: 10px 76px 10px 20px;
+            border-radius: 0px;
+            color: var(--tp-common-black);
+            font-size: 16px;
+            font-weight: 400;
+            background: #F7F7F7;
+            width: 100%;
+            border: 1px solid transparent;
+            height: 60px;
+            &:focus{
+                border: 1px solid var(--tp-common-black);
+            }
+            &::placeholder{
+                font-size: 16px;
+                line-height: 32px;
+                color: var(--tp-grey-3);
+                font-weight: 500;
+            }
+        }
+        &-icon{
+            & button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                display: inline-flex;
+                border: none;
+                padding: 0;
+                padding: 17px 19px;
+                background: var(--tp-common-black);
+                display: flex;
+                color:var(--tp-common-white);
+                align-items: center;
+                justify-content: center;
+                display: block;
+                margin-left: -9px;
+                font-size: 20px;
+                & i{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    &-close{
+        background:  var(--tp-common-black);
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 22%;
+        right: 15%;
+        line-height: 47px;
+        text-align: center;
+        cursor: pointer;
+        @media #{$xs}{
+            top: 5%;
+            right: 5%;
+        }
+        & i {
+            -webkit-transition: all 0.3s 0s ease-out;
+            -moz-transition: all 0.3s 0s ease-out;
+            -ms-transition: all 0.3s 0s ease-out;
+            -o-transition: all 0.3s 0s ease-out;
+            transition: all 0.3s 0s ease-out;
+            font-size: 30px;
+            color: var(--tp-common-white);
+            font-weight: 400;
+        }
+        &:hover i {
+            transform: rotate(180deg);
+        }
+    }
+}

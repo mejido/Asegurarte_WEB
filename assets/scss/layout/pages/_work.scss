@@ -1,0 +1,43 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 7.34 work css
+/*----------------------------------------*/
+
+.tp-work{
+    &-wrapper{
+        border: 1px solid #4a4747;
+        padding: 40px 25px 18px 25px;
+        transition: all .3s ease;
+        &:hover{
+            background: var(--tp-heading-3);
+            border: 1px solid var(--tp-heading-3);
+            & .tp-work-icon{
+                color: var(--tp-theme-08);
+            }
+        }
+        & p{
+            color: #dedede;
+        }
+    }
+    &-icon{
+        font-size: 68px;
+        color: var(--tp-common-white);
+        display: inline-block;
+        transition: all .3s ease;
+    }
+    &-title{
+        font-size: 24px;
+        letter-spacing: 0px;
+        line-height: 30px;
+        color: var(--tp-common-white);
+        @media #{$lg} {
+            font-size: 20px;
+        }
+        & a{
+            &:hover{
+                color: var(--tp-theme-08);
+            }
+        }
+    }
+}

@@ -1,0 +1,174 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.23 process css
+/*----------------------------------------*/
+
+.tp-process{
+    &-title{
+        font-size: 20px;
+        letter-spacing: 0px;
+        line-height: 28px;
+        color: var(--tp-grey-15);
+        font-weight: 700;
+        font-family: var(--tp-ff-common);
+    }
+    &-border{
+        &::before{
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 100%;
+            background: #e6e6e6;
+            top: 0;
+            right: 0;
+            @media #{$xs} {
+                display: none;
+            }
+        }
+    }
+    &-area{
+        filter: drop-shadow(1.047px -29.982px 30px rgba(119,93,146,0.06));
+        background-color: #ffffff;
+    }
+    &-btn{
+        padding: 31px 0;
+        width: 25%;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 3px;
+            background: var(--tp-theme-06);
+            top: 0;
+            left: 0;
+            transition: all .4s ease;
+            opacity: 0;
+        }
+        &.active{
+            &::after{
+                opacity: 1;
+                right: 0;
+                width: 100%;
+            }
+            & span{
+                color: var(--tp-common-black);
+            }
+        }
+        @media #{$xs} {
+            width: 100%;
+            padding: 20px 0;
+        }
+        @media #{$sm} {
+            padding: 20px 7px;
+        }
+    }
+    &-content{
+        &-wrapper{
+            background: var(--tp-theme-07);
+        }
+    }
+    &-thumb{
+        &-1{
+            @media #{$sm,$xs} {
+                width: 80%;
+            }
+        }
+        &-2{
+            float: right;
+            margin-top: -274px;
+            position: relative;
+            @media #{$md} {
+                margin-top: 0;
+            }
+            @media #{$sm} {
+                margin-top: -274px;
+                width: 80%;
+            }
+            @media #{$xs} {
+                width: 70%;
+                margin-top: -200px;
+            }
+        }
+        &-3{
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            @media #{$md,$sm,$xs} {
+                right: 0;
+            }
+        }
+    }
+    &-icon{
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: #0db1bc;
+        display: inline-block;
+        font-size: 24px;
+        color: var(--tp-common-white);
+        text-align: center;
+        line-height: 68px;
+     }
+     &-contact{
+        background: var(--tp-common-white);
+        padding: 20px;
+        display: inline-block;
+        position: absolute;
+        left: 90px;
+        bottom: -43px;
+        @media #{$md,$sm,$xs} {
+            bottom: 37px;
+            left: 0;
+        }
+        &-icon{
+            & span{
+                line-height: 30px;
+                color: var(--tp-grey-3);
+                display: block;
+            }
+            & a{
+                font-size: 20px;
+                letter-spacing: 0px;
+                color: var(--tp-heading-2);
+                font-weight: 700;
+            }
+        }
+     }
+     &-content{
+        margin-left: 70px;
+        @media #{$xl,$lg,$md,$sm,$xs} {
+            margin-left: 0;
+        }
+     }
+     &-shape{
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+        background-color: #0db1bc;
+        display: inline-block;
+        left: 156px;
+        top: 86px;
+        &-2{
+            top: 60px;
+            right: 680px;
+            left: inherit;
+        }
+        &-3{
+            bottom: 160px;
+            right: 236px;
+            width: 14px;
+            height: 14px;
+            border-radius: 7px;
+            background: #ffd323;
+        }
+     }
+     &-health{
+        &-tab{
+            @media #{$xs} {
+                flex-direction: column;
+            }
+        }
+     }
+}

@@ -1,0 +1,50 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.5 breadcrumb
+/*----------------------------------------*/
+
+.tp-breadcrumb{
+    &-title{
+        font-size: 50px;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        color: $black;
+        @media #{$xs}{
+            font-size: 38px;
+        }
+    }
+    &-dvdr{
+        margin: 0 2px;
+    }
+    &-spacing{
+        padding: 210px 0;
+        @media #{$lg,$md}{
+            padding: 150px 0;
+        }
+        @media #{$sm,$xs}{
+            padding: 120px 0;
+        }
+    }
+    &-list{
+        & span{
+            font-size: 16px;
+            line-height: 1;
+            color: var(--tp-grey-1);
+            font-weight: 700;
+            font-family: var(--tp-ff-common);
+            & a{
+                font-weight: 700;
+                color: var(--tp-green-3);
+            }
+        }
+    }
+    &-about{
+        &-spacing{
+            padding-top: 380px;
+            margin-bottom: -272px;
+            background-color: var(--tp-orange-1);
+        }
+    }
+}
+

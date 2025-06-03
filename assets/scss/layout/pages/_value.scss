@@ -1,0 +1,55 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 7.31 value css
+/*----------------------------------------*/
+
+.tp-value {
+    &-wrapper{
+        filter: drop-shadow(0 0 30px rgba(14, 11, 18, 0.06));
+        background-color: var(--tp-common-white);
+        padding: 60px;
+        padding-top: 55px;
+        padding-bottom: 37px;
+        display: flex;
+        @media #{$lg,$md,$sm}{
+            padding: 40px;
+            padding-top: 35px;
+            padding-bottom: 17px;
+        }
+        @media #{$xs}{
+            padding: 20px;
+            padding-bottom: 5px;
+        }
+        &:hover{
+            & .tp-value-icon{
+                & i{
+                    color: var(--tp-theme-secondary);
+                }
+            }
+        }
+    }
+    &-icon{
+        flex: 0 0 auto;
+        margin-right: 45px;
+        @media #{$xs}{
+            margin-right: 20px;
+        }
+        & i{
+            font-size: 66px;
+            color: var(--tp-green-3);
+            transition: all .3s ease;
+            @media #{$xs}{
+                font-size: 40px;
+            }
+        }
+    }
+    &-title{
+        font-size: 24px;
+        letter-spacing: -1px;
+        line-height: 28px;
+        font-weight: 700;
+        margin-bottom: 22px;
+        color: var(--tp-common-black);
+    }
+}

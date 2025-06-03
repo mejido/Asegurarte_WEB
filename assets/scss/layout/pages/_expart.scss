@@ -1,0 +1,46 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.15 expert css
+/*----------------------------------------*/
+
+.tp-expart{
+    &-left{
+        & img{
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+    }
+    &-content{
+        @media #{$md,$sm,$xs} {
+            float: left;
+            padding-top: 0;
+        }
+        & span{
+            line-height: 20px;
+            color: var(--tp-grey-1);
+            font-family: var(--tp-ff-common);        
+        }
+        & a{
+            color:  var(--tp-theme-primary);
+            font-weight: 600;
+            @media #{$lg} {
+                font-size: 15px;
+            }
+            &:hover{
+                color: var(--tp-common-black);
+            }
+        }
+    }
+    &-care{
+        &-content{
+            & span{
+                color: var(--tp-grey-9);
+            }
+            & a{
+                color: var(--tp-theme-08);
+                font-family: var(--tp-ff-common); 
+            }
+        }
+    }
+}

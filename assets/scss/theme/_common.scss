@@ -1,0 +1,209 @@
+@use '../utils' as *;
+/*---------------------------------
+    1.2 Common Classes
+---------------------------------*/
+
+.w-img{
+	width: 100%;
+}
+.m-img{
+	& img{
+		max-width: 100%;
+	}
+}
+.gx-20 {
+    --bs-gutter-x: 20px;
+}
+.gy-20 {
+    --bs-gutter-y: 20px;
+}
+.lineheight-1{
+	line-height: 1;
+}
+.fix {
+    overflow: hidden;
+}
+.tp-border-bottom{
+	border-bottom: 1px solid var(--tp-border-1);
+}
+.tp-border-top{
+	border-top: 1px solid var(--tp-border-1);
+	&-care{
+		margin-left: -50px;
+		margin-right: -50px;
+		@media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+            margin-left: 0;
+            margin-right: 0;
+        }
+	}
+}
+.clear{
+    clear: both;
+}
+.f-right{
+	float: right;
+}
+.z-index-1{
+	z-index: 1;
+}
+
+.z-index-11{
+	z-index: 11;
+}
+.text-right{
+	text-align: right;
+}
+.overflow-y-visible{
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+
+.include-bg{
+	@include background();
+}
+.bg-position{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.jarallax{
+	position: relative;
+	z-index: 9
+}
+// demo for method
+.demo{
+	@include tp-transition(color, .3s, linear);	
+
+	@include tp-transition-mul((color .3s linear, transform .2s ease));	
+
+	@include rtl{
+		margin-left: 0;
+		margin-right: 15px;
+	}
+	@include tp-root('div'){
+		img{
+			margin-left: 10px;
+		}
+	}
+	@include dark{
+		color: yellow;
+	}
+}
+
+
+
+
+/* dropcap */
+.#{$theme-prifix}-dropcap{
+	&::first-letter{
+		font-size: 90px;
+		font-weight: 500;
+		float: left;
+		text-align: center;
+		color: var(--tp-common-black);
+		margin-right: 5px;
+		line-height: inherit;
+		text-transform: capitalize;
+	}
+}
+
+// for svg
+// on hover stroke animation
+// not checked
+.class{
+	stroke-dasharray: 189px, 191px;
+	stroke-dashoffset: 0px;
+}
+
+
+.#{$theme-prifix}-all-font-roboto{
+	& *:not(i){
+		@extend %tp-ff-roboto;
+	}
+}
+/* gutter for x axis */
+.tp-gx-20{
+	--bs-gutter-x: 20px;
+
+	@media #{$lg}{
+		--bs-gutter-x: 20px;
+	}
+
+	@media #{$md}{
+		--bs-gutter-x: 20px;
+	}
+
+	@media #{$sm}{
+		--bs-gutter-x: 15px;
+	}
+
+	@media #{$xs}{
+		--bs-gutter-x: 10px;
+	}
+
+	& [class*="col-"]{
+		padding-right: calc(var(--bs-gutter-x) * .5);
+		padding-left: calc(var(--bs-gutter-x) * .5);
+		margin-top: var(--bs-gutter-y);
+	}
+}
+
+/* gutter for x axis */
+.tp-gx-30{
+	--bs-gutter-x: 30px;
+
+	@media #{$lg}{
+		--bs-gutter-x: 30px;
+	}
+
+	@media #{$md}{
+		--bs-gutter-x: 30px;
+	}
+
+	@media #{$sm}{
+		--bs-gutter-x: 15px;
+	}
+
+	@media #{$xs}{
+		--bs-gutter-x: 10px;
+	}
+
+	& [class*="col-"]{
+		padding-right: calc(var(--bs-gutter-x) * .5);
+		padding-left: calc(var(--bs-gutter-x) * .5);
+		margin-top: var(--bs-gutter-y);
+	}
+}
+
+/* gutter for x axis */
+.tp-gx-40{
+	--bs-gutter-x: 40px;
+
+	@media #{$lg}{
+		--bs-gutter-x: 40px;
+	}
+
+	@media #{$md}{
+		--bs-gutter-x: 30px;
+	}
+
+	@media #{$sm}{
+		--bs-gutter-x: 30px;
+	}
+
+	@media #{$xs}{
+		--bs-gutter-x: 15px;
+	}
+
+	& [class*="col-"]{
+		padding-right: calc(var(--bs-gutter-x) * .5);
+		padding-left: calc(var(--bs-gutter-x) * .5);
+		margin-top: var(--bs-gutter-y);
+	}
+}

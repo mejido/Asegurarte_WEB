@@ -1,0 +1,385 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.11 counter css
+/*----------------------------------------*/
+
+.tp-counter{
+    &-busi{
+        &-shape{
+            top: 0;
+            right: 0;
+            height: 100%;
+            z-index: -1;
+        }
+        &-shape2{
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+    }
+    &-item{
+        justify-content: center;
+        padding: 40px 0;
+        margin: 0 0 0 -1px;
+        @media #{$lg,$md,$sm,$xs}{
+            margin: -1px 0 0 -1px;
+        }
+        &-border{
+            position: relative;
+            border: 1px solid var(--tp-border-2);
+            &:after{
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                border: 1px solid var(--tp-green-2);
+                top: 0;
+                left: 0;
+                transform: scaleX(0.8);
+                opacity: 0;
+                transition: all .4s ease;
+                z-index: 1;
+            }
+            &:hover{
+                & .tp-counter-shape{
+                    opacity: 1;
+                }
+                & .tp-counter-item-icon span{
+                    color:  var(--tp-theme-primary);
+                }
+                &::after{
+                    opacity: 1;
+                    transform: scaleX(1);
+                }
+            }
+        }
+        &-icon{
+            & span{
+                font-size: 65px;
+                color: var(--tp-theme-secondary);
+                margin-right: 30px;
+                transition: all .4s ease;
+            }
+        }
+        &-content{
+            margin-top: -8px;
+            & p{
+                font-size: 18px;
+                letter-spacing: 0px;
+                line-height: 22px;
+                font-weight: 500;
+                margin-bottom: 0;
+                @media #{$xl}{
+                    font-size: 15px;
+                }
+            }
+        }
+        &-count{
+            font-size: 60px;
+            letter-spacing: -2px;
+            line-height: 60px;
+            color: var(--tp-heading-1);
+            font-weight: 800;
+            margin-bottom: 14px;
+            @media #{$xxl,$xl,$lg,$md,$sm} {
+                font-size: 45px;
+                line-height: 1;
+            }
+            @media #{$xs} {
+                font-size: 40px;
+            }
+        }
+        &-busi{
+            padding: 120px 0;
+            padding-bottom: 110px;
+            @media #{$lg,$md,$sm,$xs} {
+                padding: 60px 0;
+            }
+            @media #{$sm,$xs} {
+                flex-direction: column;
+                text-align: center;
+                & span{
+                    margin-right: 0;
+                    display: inline-block;
+                }
+            }
+            & .tp-counter-item-icon span{
+                color: var(--tp-common-white);
+            }
+            & .tp-counter-item-count{
+                color: var(--tp-common-white);
+                font-weight: 600;
+            }
+            & .tp-counter-item-content p{
+                color: #ebeaff;
+                font-weight: 400;
+            }
+            &:hover{
+                & .tp-counter-item-icon span{
+                    color: #fed101;
+                }
+            }
+        }
+    }
+    &-shape{
+        top: 0;
+        left: 0;
+        transition: all .4s ease;
+        opacity: 0;
+        z-index: -1;
+        &-2{
+            top: 0;
+            left: 31%;
+            z-index: 1;
+        }
+        &-3{
+            bottom: 0;
+            right: 15%;
+            z-index: 1;
+        }
+    }
+    &-space{
+        margin-left: -170px;
+        margin-right: -170px;
+        @media #{$x3l,$xxl,$xl,$lg,$md,$sm,$xs} {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @media #{$lg,$md,$sm,$xs} {
+            border: none;
+        }
+        &-2{
+            margin-left: -150px;
+            margin-right: -150px;
+            box-shadow: 0px 0px 60px 0px rgba(163, 151, 184, 0.08);
+            background: var(--tp-common-white);
+            padding: 80px 44px;
+            padding-bottom: 74px;
+            position: relative;
+            z-index: 10;
+            @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 30px 44px;
+            }
+        }
+    }
+    &-battom{
+        &-icon{
+            position: relative;
+            &::before{
+                position: absolute;
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                background-color: #f0e9ff;
+                bottom: -7px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                transition: all .4s ease;
+            }
+        }
+    }
+    &-item{
+        &-2{
+            & .tp-counter-item-icon{
+                & span{
+                    color: #17bd37;
+                }
+            }
+            & .tp-counter-battom-icon{
+                &::before{
+                    background: #d6f1dc;
+                }
+            }
+            &:hover{
+                & .tp-counter-battom-icon{
+                    &::before{
+                        background: #17bd37;
+                    }
+                }
+            }
+        }
+        &-3{
+            & .tp-counter-battom-icon{
+                &::before{
+                    background: #f0e9ff;
+                    z-index: 1;
+                }
+            }
+            &:hover{
+                & .tp-counter-battom-icon{
+                    &::before{
+                        background: #ff965a;
+                    }
+                }
+            }
+        }
+        &-1{
+            & .tp-counter-item-icon{
+                & span{
+                    color: #ff8c24;
+                }
+            }
+            & .tp-counter-battom-icon{
+                &::before{
+                    background: #fff0e3;
+                }
+            }
+            &:hover{
+                & .tp-counter-battom-icon{
+                    &::before{
+                        background: #ff8c24;
+                    }
+                }
+            }
+        }
+        &-4{
+            & .tp-counter-item-icon{
+                & span{
+                    color: #ff4acc; 
+                }
+            }
+            & .tp-counter-battom-icon{
+                &::before{
+                    background: #ffe2f7;
+                }
+            }
+            &:hover{
+                & .tp-counter-battom-icon{
+                    &::before{
+                        background: #ff4acc;
+                    }
+                }
+            }
+        }
+    }
+    &-area{
+        &-family{
+            margin-bottom: -160px;
+        }
+        &-busi{
+            background: var(--tp-theme-05);
+            z-index: 1;
+        }
+    }
+    &-home{
+        &-bg{
+            top: 0;
+            left: 0;
+            width: 77%;
+            right: 0;
+            height: 100%;
+            z-index: -1;
+            margin: 0 auto;
+            @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+                width: 100%;
+            }
+        }
+        &-icon{
+            & span{
+                font-size: 64px;
+                width: 110px;
+                height: 110px;
+                background-color: var(--tp-theme-04);
+                color: var(--tp-common-white);
+                line-height: 120px;
+                display: inline-block;
+                margin-bottom: 20px;
+                transition: all .4s ease;
+            }
+        }
+        &-count{
+            font-size: 60px;
+            letter-spacing: -2px;
+            line-height: 60px;
+            color: var(--tp-common-white);
+            font-weight: 600;
+        }
+        &-pre{
+            font-size: 18px;
+            letter-spacing: 0px;
+            line-height: 24px;
+            color: var(--tp-grey-10);
+        }
+        &-wrapper{
+            position: relative;
+            &:hover{
+                &::after{
+                    height: 125px;
+                }
+                & .tp-counter-home-icon{
+                    & span{
+                        background: var(--tp-common-white);
+                        color: var(--tp-theme-04);
+                    }
+                }
+            }
+            &::before{
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 125px;
+                background-color: var(--tp-grey-11);
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            &::after{
+                background-color: var(--tp-yellow-3);
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 6px;
+                z-index: -1;
+                transition: all .3s ease;                 
+            }
+        }
+    }
+    &-health{
+        padding: 62px 0;
+        position: relative;
+        z-index: 99;
+        @media #{$md,$sm,$xs} {
+            padding: 20px;
+        }
+        &-title{
+            font-size: 64px;
+            letter-spacing: -4px;
+            line-height: 80px;
+            color: var(--tp-common-3);
+            font-weight: 700;
+            &-pre{
+                font-size: 18px;
+                letter-spacing: 0px;
+                line-height: 1;
+                color: var(--tp-grey-15);
+                font-weight: 700;
+            }
+        }
+        &-border{
+            position: relative;
+            &::before{
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 100%;
+                background: #e6e6e6;
+                top: 0;
+                right: -15px;
+                @media #{$md,$sm,$xs} {
+                    display: none;
+                }
+            }
+        }
+        &-area{
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+        }
+    }
+}

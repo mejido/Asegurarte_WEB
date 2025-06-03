@@ -1,0 +1,35 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/* 7.2 author css
+/*----------------------------------------*/
+.tp-author{
+    &-content{
+        margin-left: 70px;
+        @media #{$md,$sm,$xs}{
+            margin-left: 0;
+        }
+    }
+    &-para{
+        & p{
+            color: var(--tp-grey-2);
+            line-height: 30px;
+        }
+        &-2{
+            @media #{$md,$sm,$xs}{
+                padding-bottom: 20px;
+            }
+        }
+        & p::first-letter {
+            font-size: 100px;
+            line-height: 30px;
+            color: var(--tp-common-black);
+            font-weight: 700;
+            float: left;
+            text-align: center;
+            margin-right: 5px;
+            line-height: inherit;
+            text-transform: capitalize;
+            line-height: .9;
+        }
+    }
+}

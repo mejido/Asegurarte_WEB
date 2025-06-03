@@ -1,0 +1,215 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 7.16 expreance css
+/*----------------------------------------*/
+
+
+.tp-experience{
+    &-bold{
+        font-size: 320px;
+        letter-spacing: -26px;
+        line-height: 1;
+        margin-left: 25px;
+        color: var(--tp-dark-8);
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            margin-left: 0;
+            font-size: 250px;
+        }
+        @media #{$sm} {
+            font-size: 200px;
+            margin-left: 0;
+        }
+        &-health{
+            color: var(--tp-common-3);
+        }
+    }
+    &-content{
+        margin-left: 25px;
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+            margin-left: 0;
+        }
+        & p{
+            margin-bottom: 40px;
+            margin-right: -27px;
+            @media #{$xxl,$xl,$md,$sm,$xs} {
+                margin-right: 0;
+            }
+        }
+        &-health{
+            & p{
+                color: var(--tp-grey-9);
+            }
+        }
+    }
+    &-title{
+        font-size: 22px;
+        letter-spacing: 0px;
+        line-height: 30px;
+        color: var(--tp-theme-05);
+        margin-bottom: 17px;
+        @media #{$xxl,$xl,$md,$sm,$xs} {
+            margin-right: 0;
+        }
+        &-health{
+            color: var(--tp-common-black);
+        }
+    }
+    &-shape{
+        top: 0px;
+        right: 67px;
+        &-health{
+            width: 142px;
+            height: 416px;
+            background-color: #ffd323;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: -123px;
+            margin-left: -8px;       
+        }
+    }
+    &-free{
+        &-service{
+            padding: 60px;
+            padding-top: 52px;
+            filter: drop-shadow(-0.939px 5.926px 30px rgba(92,78,117,0.08));
+            background: var(--tp-common-white);
+            margin-right: -45px;
+            margin-left: 45px;
+            margin-top: -200px;
+            z-index: 2;
+            position: relative;
+            & .tp-experience-check label:before {
+                line-height: 10px;
+            }
+            @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            @media #{$xxl,$xl,$lg,$sm,$xs} {
+                padding: 25px;
+                padding-top: 20px;
+            }
+            @media #{$md,$sm,$xs} {
+                margin-top: 0;
+            }        
+        }
+    }
+    &-check{
+        margin-left: 9px;
+        & input{
+            display: none;
+            &:checked ~ label::before {
+                visibility: visible;
+                opacity: 1;
+            }
+            &:checked ~ label::after {
+                background-color: var(--tp-green-10);
+                border-color:  var(--tp-green-10);
+            }
+        }
+        & label{
+            line-height: 20px;
+            color: #848587;
+            margin-left: 10px;
+            position: relative;
+            &:before{
+                position: absolute;
+                content: url(../../assets/img/login/check.svg);
+                top: 4px;
+                left: -20px;
+                width: 12px;
+                height: 12px;
+                line-height: 16px;
+                text-align: center;
+                visibility: hidden;
+                opacity: 0;
+                color: var(--tp-common-white);
+                -ms-transition: all 0.2s ease-out 0s;
+                transition: all 0.2s ease-out 0s;
+                z-index: 1;
+            }
+            &:after{
+                position: absolute;
+                content: "";
+                top: 4px;
+                left: -20px;
+                width: 12px;
+                height: 12px;
+                line-height: 12px;
+                text-align: center;
+                border: 1px solid #e6e6e6;
+                -o-transition: all 0.2s ease-out 0s;
+                transition: all 0.2s ease-out 0s;
+            }
+        }
+    }
+    &-input{
+        position: relative;
+        & label{
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: #848587;
+        }
+        & input{
+            padding-left: 54px;
+            font-family: var(--tp-ff-p);
+            color: var(--tp-common-black);
+            border: 1px solid #e6e6e6;
+            &:focus{
+                border: 1px solid var(--tp-theme-05);
+            }
+            &::placeholder{
+                color: #848587;
+                font-size: 16px;
+            }
+        }
+        &-title{
+            font-size: 24px;
+            letter-spacing: 0px;
+            line-height: 1;
+            color: var(--tp-dark-8);
+        }
+    }
+    &-form{
+        &-title{
+            font-size: 24px;
+            letter-spacing: 0px;
+            line-height: 30px;
+            color: var(--tp-dark-8);
+        }
+    }
+    &-button{
+        & button{
+            width: 100%;
+            background: var(--tp-green-10);
+            font-size: 16px;
+            letter-spacing: 0px;
+            line-height: 20px;
+            color: var(--tp-common-white);
+            font-weight: 700;
+            padding: 18px 0;
+            &:hover{
+                background: var(--tp-common-black);
+            }
+        }
+    }
+    &-health{
+        &-button{
+            & button{
+                background: var(--tp-theme-06);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

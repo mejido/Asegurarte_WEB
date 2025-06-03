@@ -1,0 +1,63 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 7.33 visitors css
+/*----------------------------------------*/
+
+.tp-visitors{
+    &-thumb{
+        margin-left: 35px;
+        @media #{$lg,$md,$sm,$xs} {
+            margin-left: 0;
+        }
+        &-2{
+            margin-top: -260px;
+            margin-right: -130px;
+            float: right;
+            z-index: 1;
+            position: relative;
+            @media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+                margin-right: 0;
+            }
+            @media #{$xs}{
+                width: 80%;
+                top: 50px;
+            }
+        }
+        &-3{
+            bottom: -65%;
+            left: 16px;
+            z-index: 1;
+            border-radius: 50%;
+        }
+        &-4{
+            filter: drop-shadow(0 0 20px rgba(36, 27, 100, 0.12));
+            bottom: -72px;
+            z-index: 1;
+            left: -30px;
+            right: 0;
+            margin: auto;
+        }
+    }
+    &-list{
+        & ul{
+            & li{
+                margin-bottom: 15px;
+                & span{
+                    line-height: 1;
+                    & i{
+                        color: var(--tp-theme-12);
+                        font-size: 18px;
+                        margin-top: 3px;
+                        display: inline-block;
+                        margin-right: 10px;
+                    }
+                }
+                & .tp-about-list-title{
+                    color: var(--tp-heading-5);
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

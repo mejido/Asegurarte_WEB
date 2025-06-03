@@ -1,0 +1,43 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  4.2 Menu-Style 2
+/*----------------------------------------*/
+
+.tp-menu{
+    &-family{
+        & nav{
+            & ul{
+                & li{
+                    &:hover > a{
+                        color: var(--tp-yellow-2);
+                    }
+                    & a{
+                        color: var(--tp-dark-1);
+                        padding: 45px 0;
+                        &:hover{
+                            color: var(--tp-yellow-2);
+                        }
+                        &.active{
+                            color: var(--tp-yellow-2);
+                        }
+                    }
+                    .tp-submenu.submenu.has-homemenu .homemenu-title a:hover {
+                        color: var(--tp-yellow-2);
+                    }
+                    .submenu li a:hover::before {
+                        color: var(--tp-yellow-2);
+                    }
+                }
+            }
+        }
+    }
+    &-blur{
+        &-thumb{
+            & img{
+                filter: blur(5px);
+            }
+        }
+    }
+}

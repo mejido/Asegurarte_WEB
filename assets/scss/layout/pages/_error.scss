@@ -1,0 +1,13 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.14 error css
+/*----------------------------------------*/
+.tp-eror{
+    &-title{
+        font-size: 36px;
+        letter-spacing: -1px;
+        line-height: 1;
+        color: var(--tp-heading-1);
+    }
+}

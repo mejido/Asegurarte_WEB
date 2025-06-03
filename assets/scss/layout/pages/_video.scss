@@ -1,0 +1,168 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 7.32 video css
+/*----------------------------------------*/
+
+.tp-video{
+    &-play{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: inline-block;
+        background: var(--tp-common-white);
+        text-align: center;
+        line-height: 60px;
+        font-size: 16px;
+        color:  var(--tp-theme-primary);
+        position: relative;
+        transition: all .4s ease;
+        &-family{
+            font-size: 25px;
+            width: 80px;
+            height: 80px;
+            line-height: 84px;
+            & .tp-video-waves{
+                right: -20px;
+                bottom: -21px;
+            }
+        }
+        &-2{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 0;
+            border: 1px solid var(--tp-common-white);
+            background: none;
+            position: relative;
+            &::before{
+                position: absolute;
+                content: "";
+                width: 100%;
+                animation: pulse2 0.8s ease-out infinite;
+                height: 100%;
+                border: 1px solid var(--tp-common-white);
+                left: 0;
+                top: 0;
+            }
+            & i{
+                color: var(--tp-common-white);
+                font-size: 20px;
+            }
+        }
+        &:hover{
+            color: var(--tp-common-black);
+        }
+    }
+    &-waves{
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: var(--tp-common-white);
+        opacity: 0;
+        border-radius: 100%;
+        right: -29px;
+        bottom: -29px;
+        z-index: -1;
+        -webkit-animation: tp-video-waves 3s ease-in-out infinite;
+        animation: tp-video-waves 3s ease-in-out infinite;
+        position: absolute;
+        z-index: 2;
+    }
+    &-wave-1{
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s;
+    }
+    &-wave-2{
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s;
+    }
+    &-wave-3{
+        -webkit-animation-delay: 2s;
+        animation-delay: 2s;
+    }
+    &-area{
+        padding: 284px 0;
+        @media #{$xs}{
+            padding: 100px 0;
+        }
+        &-family{
+            padding-top: 320px;
+            padding-bottom: 110px;
+            @media #{$md,$sm,$xs} {
+                padding-top: 230px;
+                padding-bottom: 47px;
+            }
+        }
+    }
+    &-title{
+        & h2{
+            font-size: 60px;
+            letter-spacing: -2px;
+            line-height: 1.2;
+            color: var(--tp-common-white);
+            @media #{$sm,$xs} {
+                font-size: 40px;
+            }
+        }
+    }
+    &-btn{
+        & a{
+            color: var(--tp-blue-6);
+        }
+        &-family{
+            @media #{$md,$sm,$xs} {
+                float: left;
+            }
+        }
+    }
+    &-brand{
+        text-align: center;
+        & a{
+            opacity: .5;
+            transition: all .3s ease;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    &-health{
+        &-title{
+            font-size: 65px;
+            letter-spacing: -3px;
+            line-height: 1.1;
+            color: var(--tp-common-white);
+            @media #{$md,$sm,$xs}{
+                font-size: 40px;
+                letter-spacing: inherit;
+            }
+            &-pre{
+                letter-spacing: 0px;
+                line-height: 20px;
+                color: #f7f0f0;
+                font-weight: 700;
+                font-family: var(--tp-ff-common);
+                display: inline-block;
+            }
+        }
+        &-area{
+            z-index: 9;
+        }
+        &-round{
+            & a{
+                width: 126px;
+                height: 126px;
+                line-height: 130px;
+                border-radius: 50%;
+                display: inline-block;
+                color: var(--tp-common-white);
+                border: 2px solid var(--tp-common-white);
+                text-align: center;
+                animation: pulse2 0.8s ease-out infinite;
+                & i{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

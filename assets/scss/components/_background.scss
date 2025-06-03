@@ -1,0 +1,78 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.2 background
+/*----------------------------------------*/
+
+.tp-slider-bg {
+	background: var(--tp-theme-primary);
+}
+.tp-slider-bg-pet {
+	background: var(--tp-theme-09);
+}
+.tp-bg-yellow{
+	background: var(--tp-orange-1);
+}
+.tp-bg-yellow2{
+	background: #ffefe1;
+}
+.tp-blue-bg{
+	background: var(--tp-blue-1);
+}
+.tp-blue-bg-2{
+	background: var(--tp-theme-03);
+}
+.tp-blue-bg-3{
+	background: var(--tp-theme-07);
+}
+.tp-orange-bg{
+	background: var(--tp-orange-5);
+}
+.tp-white-bg{
+	background: var(--tp-common-white);
+}
+.tp-dark-bg{
+	background: var(--tp-dark-6);
+}
+.tp-travel-bg{
+	background: var(--tp-theme-11);
+}
+.tp-dark-bg-2{
+	background: var(--tp-heading-4);
+}
+.tp-green-bg{
+	background: var(--tp-theme-04);
+}
+.tp-green-bg-2{
+	background: var(--tp-theme-05);
+}
+.tp-grey-bg{
+	background: var(--tp-grey-7);
+}
+.tp-grey-bg-2{
+	background: var(--tp-grey-12);
+}
+.tp-grey-bg-3{
+	background: #f6f6f6;
+}
+.tp-grey-bg-4{
+	background: #fbf6f1;
+}
+.tp-grey-bg-5{
+	background: #f9f1e8;
+}
+.tp-mrg-bg{
+	background: var(--tp-theme-14);
+}
+.tp-mrg-bg-2{
+	background: #f8e7d6;
+}
+.tp-mrg-bg-3{
+	background: #fcf6f0;
+}
+.tp-mrg-bg-4{
+	background-image: linear-gradient(180deg, #f7e7d5 0%, #f5f1ef 100%);
+}
+.tp-mrg-bg-5{
+	background: #f5f2ef;
+}

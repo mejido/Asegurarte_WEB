@@ -1,0 +1,95 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  4.1 business-menu
+/*----------------------------------------*/
+
+.tp-header{
+    &-info{
+        &-business{
+            & ul{
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                & li{
+                    margin-left: 40px;
+                    & i{
+                        font-size: 16px;
+                    }
+                    & a{
+                        display: flex;
+                        align-items: center;
+                        & i{
+                            margin-right: 10px;
+                        }
+                    }
+                    & a:hover{
+                        color: var(--tp-green-10);
+                    }
+                    & .tp-header-top-btn{
+                        & a{
+                            padding: 17px 44px;
+                            background: var(--tp-green-10);
+                            &:hover{
+                                color: var(--tp-common-white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-right{
+        &-business{
+            & ul{
+                & li{
+                    margin-left: 25px;
+                }
+                & .tp-header-border-2{
+                    padding-left: 30px;
+                    margin-left: 30px;
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        width: 1px;
+                        height: 40px;
+                        background: #b6b0ff;
+                        top: -7px;
+                        left: 0;
+                    }
+                }
+                & button{
+                    color: var(--tp-common-white);
+                    font-size: 24px;
+                    margin-top: 4px;
+                    &:hover{
+                        color: var(--tp-theme-secondary);
+                    }
+                }
+            }
+        }
+    }
+    &-tel-business{
+        color: var(--tp-common-white);
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--tp-common-white);
+        font-weight: 700;
+        & a{
+            display: flex;
+            align-items: center;
+            font-family: var(--tp-ff-common);
+            font-weight: 700;
+            &:hover{
+                color: var(--tp-theme-secondary);
+            }
+        }
+        & i{
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+    }
+}

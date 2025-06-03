@@ -1,0 +1,399 @@
+@use '../utils' as *;
+/*----------------------------------------*/
+/*  2.1 animetion
+/*----------------------------------------*/
+
+/* pulse effect animation */
+// infinate-rotate
+@keyframes spinaround {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes headerSlideDown {
+  0% {
+   margin-top:-150px
+  }
+  100% {
+   margin-top:0
+  }
+ }
+
+ @keyframes pulse2 {
+  50% {
+    box-shadow: 0 0 0 0.3em rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    box-shadow: 0 0 0 0.6em rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes upslide {
+	0%, 20%, 50%, 80%, 100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-20px);
+	}
+	60% {
+		transform: translateY(-10px);
+	}
+}
+.upslide{
+	animation: upslide 4s linear forwards infinite alternate;
+}
+
+@keyframes light {
+	0% {
+	opacity: 1;
+	}
+	50% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+	color: white;
+	}
+}
+.light{
+	animation: light 2.5s linear forwards infinite alternate;
+}
+
+// tp rotate animation
+@include keyframes(tprotate){
+	0%{
+		@include transform(rotate(0deg));
+	}
+	100%{
+		@include transform(rotate(360deg));
+	}
+}
+.tprotate{
+	-webkit-animation: tprotate 2s infinite alternate;
+	animation: tprotate 2s infinite alternate;
+}
+
+
+@include keyframes(tpSwing){
+	0% {
+			@include transform(rotate(6deg));
+	}
+	100% {
+			@include transform(rotate(-6deg));
+	}
+}
+.tpswing{
+	animation: tpSwing 2s linear infinite alternate;
+}
+
+@include keyframes(tpshake){
+    10% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: skew(15deg);
+    }
+    80% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+// fadeInUp
+@keyframes fadeInUp {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(20px);
+			-ms-transform: translateY(20px);
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
+		}
+  }
+  @-webkit-keyframes fadeInUp {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(20px);
+			transform: translateY(20px);
+		}
+		
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+  }
+
+  .fadeInUp {
+		-webkit-animation-name: fadeInUp;
+		animation-name: fadeInUp;
+		}
+
+		@include keyframes(tfLeftToRight){
+		49% {
+			transform: translateX(30%);
+		}
+		50% {
+			opacity: 0;
+			transform: translateX(-30%);
+		}
+		100% {
+			opacity: 1;
+		}
+}
+.tfLeftToRight{
+	width: 40px;
+	display: inline-block;
+}
+.tfLeftToRight:hover{
+	animation: tfLeftToRight 0.5s forwards;
+}
+//   treeMove
+@keyframes treeMove {
+	0% {
+		-webkit-transform: rotate(0deg) translateX(0);
+		transform: rotate(0deg) translateX(0);
+	}
+	75% {
+		-webkit-transform: rotate(5deg) translateX(10px);
+		transform: rotate(5deg) translateX(10px);
+	}
+	50% {
+		-webkit-transform: rotate(10deg) translateX(20px);
+		transform: rotate(10deg) translateX(20px);
+	}
+	100% {
+		-webkit-transform: rotate(0deg) translateX(0);
+	transform: rotate(0deg) translateX(0);
+}
+}
+.tree-move{
+	animation-name: treeMove;
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+// tpupdown
+@keyframes tpupdown {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(-20px)
+    }
+}
+.up-down{
+    animation: tpupdown 1.5s infinite alternate;
+}
+
+// tptranslateX2
+@keyframes tptranslateX2 {
+    0% {
+        transform: translateX(-30px)
+    }
+
+    to {
+        transform: translateX(20px)
+    }
+}
+.tptranslateX2{
+	animation: tptranslateX2 4s infinite alternate;
+}
+// tptranslateY2
+@keyframes tptranslateY2 {
+    0% {
+        transform: translateY(-30px)
+    }
+
+    to {
+        transform: translateY(20px)
+    }
+}
+.tptranslateY2{
+    animation: tptranslateY2 4s infinite alternate forwards;
+}
+// rotate-190
+@keyframes rotate-infite {
+    0% {
+       transform: rotate(0deg);
+    }
+
+    100% {
+		transform: rotate(360deg);
+    }
+}
+.rotate-infite{
+	animation: rotate-infite 4s linear infinite;
+}
+
+// zom-in-out
+@keyframes zom-in-out{
+    0% {
+       transform: scale(1);
+    }
+
+    50% {
+		transform: scale(1.1);
+    }
+	100%{
+		transform: scale(1);
+	}
+}
+.zom-in-out{
+	animation: zom-in-out 4s linear infinite;
+	-webkit-animation: zom-in-out 4s linear infinite;
+}
+// rotate360
+@keyframes rotate360{
+    0% {
+       transform: rotate(0);
+    }
+
+    100% {
+		transform: rotate(-360deg);
+    }
+}
+.rotate360{
+	animation: rotate360 6s linear infinite;
+	-webkit-animation: rotate360 6s linear infinite;
+}
+
+
+
+// zom-in-out-2
+@keyframes zom-in-out-2{
+    0% {
+       transform: scale(1);
+    }
+
+    50% {
+		transform: scale(1.05);
+    }
+	100%{
+		transform: scale(1);
+	}
+}
+.zom-in-out-2{
+	animation: zom-in-out-2 4s linear infinite;
+	-webkit-animation: zom-in-out-2 4s linear infinite;
+	-moz-animation: zom-in-out-2 4s linear infinite;
+}
+@include keyframes(tp-video-waves2){
+	0% {
+		-webkit-transform: scale(0.2, 0.2);
+		transform: scale(0.2, 0.2);
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+	50% {
+		opacity: 0.9;
+    	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	}
+	100% {
+		-webkit-transform: scale(0.9, 0.9);
+		transform: scale(0.9, 0.9);
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+}
+
+@include keyframes(tp-video-waves){
+	0% {
+		-webkit-transform: scale(0.2, 0.2);
+		transform: scale(0.2, 0.2);
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+	50% {
+		opacity: 0.9;
+    	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	}
+	100% {
+		-webkit-transform: scale(0.9, 0.9);
+		transform: scale(0.9, 0.9);
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+}
+// moving
+@keyframes moving {
+    0% {
+        transform: translatey(0)
+    }
+
+    20% {
+        transform: translateX(-50px)
+    }
+
+    50% {
+        transform: translatey(-40px)
+    }
+
+    to {
+        transform: translatey(0)
+    }
+}
+.moving{
+	animation: moving 9s linear infinite;
+	-webkit-animation: moving 9s linear infinite;
+	-moz-animation: moving 9s linear infinite;
+}
+.animetion{
+	-webkit-animation-name: fadeInUp;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+    animation-delay: 0.6s;
+    animation-duration: 1s;
+    opacity: 1;
+}
+@keyframes tp-pulse-2 {
+		0% {
+			-moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+			box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+		}
+		70% {
+			-moz-box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+			box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+		}
+		100% {
+			-moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+			box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+		}
+  }
+  
+  @keyframes fadeInRight {
+	0% {
+	  opacity: 0;
+	  -webkit-transform: translateX(20px);
+	  -ms-transform: translateX(20px);
+	  transform: translateX(20px);
+	}
+  
+	100% {
+	  opacity: 1;
+	  -webkit-transform: translateX(0);
+	  -ms-transform: translateX(0);
+	  transform: translateX(0);
+	}
+  }
+  
+  .fadeInRight {
+	-webkit-animation-name: fadeInRight;
+	animation-name: fadeInRight;
+  }

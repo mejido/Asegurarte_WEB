@@ -1,0 +1,163 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 7.6 caririer css
+/*----------------------------------------*/
+
+
+.tp-carrier{
+    &-list{
+        &-icon{
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--tp-yellow-2);
+            position: relative;
+            margin-right: 30px;
+            flex: 0 0 auto;
+            @media #{$xs} {
+                margin-right: 15px;
+            }
+            &::before{
+                position: absolute;
+                content: "";
+                width: 17px;
+                height: 17px;
+                border-radius: 9px;
+                background-color: var(--tp-yellow-2);
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        &-2{
+            & .tp-carrier-list-icon{
+                border: 1px solid #9b6cff;
+                &::before{
+                    background-color: #9b6cff;  
+                }
+            }
+        }
+        &-3{
+            & .tp-carrier-list-icon{
+                border: 1px solid #17bd37;
+                &::before{
+                    background-color: #17bd37;  
+                }
+            }
+        }
+        &-title{
+            font-size: 22px;
+            letter-spacing: 0px;
+            line-height: 28px;
+            color: #131313;
+        }
+        &-content{
+            margin-top: -8px;
+        }
+    }
+    &-content{
+        @media #{$md,$sm,$xs} {
+            padding: 100px 0;
+        }
+    }
+    &-exper{
+        &-title{
+            font-size: 60px;
+            letter-spacing: -2px;
+            line-height: 1;
+            color: var(--tp-blue-5);
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        &-para{
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--tp-dark-2);
+            font-weight: bold;
+        }
+    }
+    &-img{
+        margin-left: 40px;
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+            margin-left: 0;
+        }
+        & img{
+            @media #{$md,$sm,$xs} {
+                width: 100%;
+            }
+        }
+    }
+    &-shape{
+        left: -17px;
+        z-index: -1;
+        filter: saturate(0);
+        @media #{$sm,$xs} {
+            width: 30%;
+        }
+    }
+    &-btn{
+        @media #{$xs} {
+            flex-direction: column;
+            align-items: flex-start!important;
+        }
+        & .tp-btn{
+            @media #{$xs} {
+                margin-bottom: 20px;
+            }
+        }
+        &-care{
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: var(--tp-common-white);
+            display: inline-block;
+            font-size: 18px;
+            color: var(--tp-theme-08);
+            line-height: 67px;
+            &:hover{
+                background: var(--tp-theme-08);
+            }
+        }
+    }
+    &-title{
+        font-size: 60px;
+        letter-spacing: -2px;
+        line-height: 1.04;
+        color: var(--tp-common-white);
+        @media #{$sm}{
+            font-size: 48px;
+        }
+        @media #{$xs}{
+            font-size: 40px;
+        }
+    }
+    &-pet{
+        &-title{
+            font-size: 70px;
+            letter-spacing: -3px;
+            line-height: 1;
+            color: var(--tp-common-white);
+            @media #{$md}{
+                font-size: 60px;
+            }
+            @media #{$sm}{
+                font-size: 56px;
+            }
+            @media #{$xs}{
+                font-size: 42px;
+            }
+        }
+        &-para{
+            color: var(--tp-common-white);
+            @media #{$xs}{
+                & br{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+  
