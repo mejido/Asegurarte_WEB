@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="assets/css/spacing.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/user.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   </head>
 
   <body>
@@ -76,7 +78,6 @@
                   <span>Seguinos en</span>
                   <a href="https://www.instagram.com/asegurarte_art/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" title="enlace a instagram"></i></a>
                   <a href="https://www.tiktok.com/@asegurarte_art" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok" title="ir a TikTok"></i></a>
-                  <a href="https://www.youtube.com/@asegurarte-art" target="_blank" rel="noopener"><i class="fa-brands fa-youtube" title="ir a YouTube"></i></a>
                 </div>
               </div>
             </div>
@@ -149,54 +150,60 @@
         </div>
         <!-- header-bootom-end -->
       </div>
-      <!-- header-area-end -->
+      <!-- header-area-end --> 
 
-      <!-- tp-offcanvus-area-start -->
-      <div class="tpoffcanvas-area">
-        <div class="tpoffcanvas">
-          <div class="tpoffcanvas__close-btn">
-            <button class="close-btn"><i class="fal fa-times" title="cerrar"></i></button>
-          </div>
-          <div class="tpoffcanvas__logo">
+    </header>
+
+    <!-- Offcanvas Mobile Menu Start -->
+    <div class="tpoffcanvas">
+      <div class="tp-offcanvas-wrapper">
+        <div class="tp-offcanvas-top d-flex justify-content-between align-items-center">
+          <div class="tp-offcanvas-logo">
             <a href="index.html">
-              <img src="assets/img/logo/logo.png" alt="logo asegurarte" />
+              <img src="assets/img/logo/logo.png" alt="Logo Asegurarte">
             </a>
           </div>
-          <div class="tp-main-menu-mobile d-xl-none"></div>
-          <div class="tpoffcanvas-btn-1 mb-50">
-            <a class="tpoffcanvas-btn" href="https://wa.me/1139264686?text=Hola%20quiero%20bajar%20mis %20costos%20de%20ART">CONTACTANOS</a>
-          </div>
-          <div class="tpoffcanvas__contact-info">
-            <div class="tpoffcanvas__contact-title">
-              <h5>Contactanos</h5>
-            </div>
-            <ul>
-              <li>
-                <i class="fa-light fa-location-dot"></i>
-                <a href="#">Buenos Aires - Argentina</a>
-              </li>
-              <li>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:bajatuscostos@asegurarte.com?Subject=Quiero%20bajar%20mis%20costos%20de%20ART&Body=Este%20mensaje%20llega%20desde%20la%20pagina%20de%20asegurarte%20.com"><span>bajatuscostos@asegurarte.com</span></a>
-              </li>
-              <li>
-                <i class="flaticon-telephone"></i>
-                <a class="tel-contacto" href="tel:(11)39264686">11 3926 4686</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="tpoffcanvas__social">
-            <div class="social-icon">
-              <a href="https://www.instagram.com/asegurarte_art/" target="_blank" rel="noopener"><i class="fab fa-instagram" title="ir a instagram"></i></a>
-              <a href="https://www.tiktok.com/@asegurarte_art" target="_blank" rel="noopener"><i class="fab fa-tiktok" title="ir a TikTok"></i></a>
-              <a href="https://www.youtube.com/@asegurarte-art" target="_blank" rel="noopener"><i class="fab fa-youtube" title="ir a YouTube"></i></a>
-            </div>
+          <div class="tp-offcanvas-close">
+            <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
           </div>
         </div>
-          <div class="body-overlay"></div>
-      <!-- tp-offcanvus-area-end -->
-    </header>
+        <div class="tp-offcanvas-content">
+
+          <nav class="tp-offcanvas-menu">
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#consultas">Consultas</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+          
+          <!-- Botón grande Contactanos -->
+          <div class="tp-header-btn tp-header-btn-home" style="margin: 30px 20px;">
+            <a class="tp-btn tp-btn-yellow-2" href="https://wa.me/1139264686?text=Hola%20quiero%20bajar%20mis%20costos%20de%20ART" target="_blank" rel="noopener">
+              CONTACTANOS
+            </a>
+          </div>
+
+          <!-- Sección de contacto -->
+          <div class="tp-offcanvas-contact">
+            <div class="tp-offcanvas-contact-info">
+              <p><i class="fa-solid fa-location-dot"></i> Buenos Aires – Argentina</p>
+              <p><i class="fa-solid fa-envelope"></i> <a href="mailto:bajatuscostos@asegurarte.com">bajatuscostos@asegurarte.com</a></p>
+              <p><i class="fa-solid fa-phone"></i> <a href="tel:1139264686">11 3926 4686</a></p>
+            </div>
+            
+            <!-- Redes sociales -->
+            <div class="tp-offcanvas-social">
+              <a href="https://www.instagram.com/asegurarte_art/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" title="Instagram"></i></a>
+              <a href="https://www.tiktok.com/@asegurarte_art" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok" title="TikTok"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Offcanvas Mobile Menu End -->
 
     <main>
       <!-- slider-area-start -->
@@ -504,7 +511,7 @@
                     </h2>
                     <div id="order__collapse_three" class="accordion-collapse collapse" aria-labelledby="order_three" data-bs-parent="#general_faqaccordion">
                       <div class="accordion-body tp-faq-para">
-                        <p class="g-color-dark-grey">Al momento de elegir una <span>ART para tu empresa</span>, es importante comparar los **costos y precios del seguro de riesgos del trabajo** que ofrecen las distintas aseguradoras.</p>
+                        <p class="g-color-dark-grey">Al momento de elegir una <span>ART para tu empresa</span>, es importante comparar los <strong>costos y precios del seguro de riesgos del trabajo</strong> que ofrecen las distintas aseguradoras.</p>
                         <p class="g-color-dark-grey">También conviene analizar <strong>el nivel de asesoramiento en prevención de riesgos laborales</strong> que brinda cada ART:</p>
                         <ul>
                           <li><strong>- ¿Ofrecen seguimiento periódico y capacitación?</strong></li>
@@ -534,7 +541,7 @@
                     </h2>
                     <div id="order__collapse_four" class="accordion-collapse collapse" aria-labelledby="order_four" data-bs-parent="#general_faqaccordion">
                       <div class="accordion-body tp-faq-para">
-                        <p class="g-color-dark-grey">Podés solicitar el **traspaso de una ART a otra** una vez cumplidos los <strong>12 meses desde el inicio de vigencia del contrato actual.</strong> A partir de ese momento, el cambio puede gestionarse en cualquier momento.</p>
+                        <p class="g-color-dark-grey">Podés solicitar el <strong>traspaso de una ART a otra</strong> una vez cumplidos los <strong>12 meses desde el inicio de vigencia del contrato actual.</strong> A partir de ese momento, el cambio puede gestionarse en cualquier momento.</p>
                         <p class="g-color-dark-grey">En el caso de empresas nuevas, que inician actividad por primera vez, el <strong>primer traspaso de ART</strong> se puede realizar luego de cumplir <strong>6 meses de contrato.</strong></p>
                         <p class="g-color-dark-grey"><strong>¿Querés evaluar un cambio?</strong> Consultanos y <strong>te ayudamos</strong> a encontrar una opción más conveniente para tu empresa.</p>
                       </div>
@@ -732,7 +739,7 @@
 
                 <div class="tab-pane fade show active" id="v-pills-home1" role="tabpanel" aria-labelledby="v-pills-home1-tab">
                   <div class="tp-contact-form tp-contact-home-form">
-                    <form action="assets/mail.php" method="post">
+                    <form action="https://www.mejido.net/formulario/mail.php" method="post">
                       <h2 class="tp-contact-form-title mb-35">Envia tus Datos</h2>
                       <div class="tp-contact-input mb-20">
                         <input type="text" name="name" placeholder="Nombre" />
@@ -752,7 +759,7 @@
 
                 <div class="tab-pane fade show" id="v-pills-health" role="tabpanel" aria-labelledby="v-pills-health-tab">
                   <div class="tp-contact-form tp-contact-home-form">
-                    <form action="assets/mail.php" method="post">
+                    <form action="https://www.mejido.net/formulario/mail.php" method="post">
                       <h2 class="tp-contact-form-title mb-35">Envia tus Datos</h2>
                       <div class="tp-contact-input mb-20">
                         <input type="text" name="name" placeholder="Nombre" />
@@ -772,7 +779,7 @@
 
                 <div class="tab-pane fade" id="v-pills-life" role="tabpanel" aria-labelledby="v-pills-life-tab">
                   <div class="tp-contact-form tp-contact-home-form">
-                    <form action="assets/mail.php" method="post">
+                    <form action="https://www.mejido.net/formulario/mail.php" method="post">
                       <h2 class="tp-contact-form-title mb-35">Envia tus Datos</h2>
                       <div class="tp-contact-input mb-20">
                         <input type="text" name="name" placeholder="Nombre" />
@@ -792,7 +799,7 @@
 
                 <div class="tab-pane fade" id="v-pills-veichele" role="tabpanel" aria-labelledby="v-pills-veichele-tab">
                   <div class="tp-contact-form tp-contact-home-form">
-                    <form action="assets/mail.php" method="post">
+                    <form action="https://www.mejido.net/formulario/mail.php" method="post">
                       <h2 class="tp-contact-form-title mb-35">Envia tus Datos</h2>
                       <div class="tp-contact-input mb-20">
                         <input type="text" name="name" placeholder="Nombre" />
@@ -859,11 +866,10 @@
                   <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="logo asegurarte blanco" /></a>
                 </div>
                 <div class="d-flex tp-footer-widget-social-family tp-footer-widget-social-home">
-                  <a class="tp-footer-widget-social-phone" href="tel:(+00)67834598568">11 3926 4686</a>
+                  <a class="tp-footer-widget-social-phone" href="tel:1139264686">11 3926 4686</a>
                   <div class="tp-footer-widget-social-info tp-footer-widget-social-info-home">
                     <a href="https://www.instagram.com/asegurarte_art/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" title="ir a instagram"></i></a>
                     <a href="https://www.tiktok.com/@asegurarte_art" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok" title="ir a TikTok"></i></a>
-                    <a href="https://www.youtube.com/@asegurarte-art" target="_blank" rel="noopener"><i class="fa-brands fa-youtube" title="ir a YouTube"></i></a>
                   </div>
                 </div>
               </div>
@@ -923,6 +929,25 @@
     </footer>
     <!-- footer-area-end -->
 
+    <!-- tp-footer-mobile-area-start -->
+    <footer class="footer-simple">
+      <div class="tp-offcanvas-contact">
+        <div class="tp-offcanvas-contact-info">
+          <p><i class="fa-solid fa-location-dot"></i> Buenos Aires – Argentina</p>
+          <p><i class="fa-solid fa-envelope"></i> <a href="mailto:bajatuscostos@asegurarte.com?Subject=Quiero%20bajar%20mis%20costos%20de%20ART&Body=Este%20mensaje%20llega%20desde%20la%20pagina%20de%20asegurarte%20.com">bajatuscostos@asegurarte.com</a></p>
+          <p><i class="fa-solid fa-phone"></i> <a href="tel:1139264686">11 3926 4686</a></p>
+        </div>
+        <div class="tp-offcanvas-social">
+          <a href="https://www.instagram.com/asegurarte_art/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" title="Instagram"></i></a>
+          <a href="https://www.tiktok.com/@asegurarte_art" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok" title="TikTok"></i></a>
+        </div>
+      </div>
+      <div class="container text-center">
+        <p>© 2025 Asegurarte. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <!-- tp-footer-mobile-area-end -->
+
     <!-- JS here -->
     <script src="assets/js/vendor/jquery.js"></script>
     <script src="assets/js/vendor/waypoints.js"></script>
@@ -943,5 +968,33 @@
     <!-- template js -->
     <script src="assets/js/slider-init.js"></script>
     <script src="assets/js/main.js"></script>
-  </body>
+
+    <script>
+      $(document).ready(function () {
+        var headerHeight = $('#tp-header-sticky').outerHeight(); // Altura real del header
+
+        $('.tp-offcanvas-menu a, .tp-main-menu-content a').on('click', function (e) {
+          var href = $(this).attr('href');
+          var target = $(href);
+
+          if (href === "#inicio") {
+            e.preventDefault();
+            $('html, body').animate({
+              scrollTop: 0
+            }, 750);
+          } else if (target.length) {
+            e.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top - headerHeight
+            }, 750);
+          }
+
+          // Cerrar menú mobile
+          $('.tpoffcanvas').removeClass('opened');
+          $('.body-overlay').removeClass('apply');
+        });
+      });
+    </script>
+
+</body>
 </html>

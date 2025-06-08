@@ -94,3 +94,593 @@ span.txt-bold {
   font-weight: 700;
   transition: all 0.4s ease;
 }
+
+/* ------------------------------------------ */
+/* AJUSTES RESPONSIVE BASE PARA MOBILE */
+/* ------------------------------------------ */
+@media (max-width: 768px) {
+  /* General */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Imágenes */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Textos principales */
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+
+  /* Section Titles */
+  .tp-section-title-nosotros {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  /* Containers */
+  .container,
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Botones */
+  .tp-btn {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  /* Navbar */
+  .navbar-brand img {
+    max-width: 120px;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+
+  /* Formularios */
+  input,
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* Secciones: margen y padding */
+  .mt-100,
+  .pt-100 {
+    margin-top: 40px !important;
+    padding-top: 40px !important;
+  }
+  .mt-80,
+  .pt-80 {
+    margin-top: 30px !important;
+    padding-top: 30px !important;
+  }
+  .mt-60,
+  .pt-60 {
+    margin-top: 20px !important;
+    padding-top: 20px !important;
+  }
+
+  /* Footer */
+  .tp-footer-widget-social-phone {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* Flex a columna en mobile */
+  .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Offcanvas - Fondo blanco y ancho */
+.tp-offcanvas-area {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  transition: right 0.3s ease;
+}
+
+/* Cuando está abierto */
+.tp-offcanvas-area.active {
+  right: 0;
+}
+
+/* Wrapper interno */
+.tp-offcanvas-wrapper {
+  padding: 30px 20px;
+}
+
+/* Logo arriba */
+.tp-offcanvas-logo img {
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* Botón cerrar */
+.tp-offcanvas-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.tp-offcanvas-close .close-btn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.tp-offcanvas-close .close-btn i {
+  font-size: 18px;
+  color: #000;
+}
+
+/* Menú de navegación */
+.tp-offcanvas-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tp-offcanvas-menu ul li {
+  margin-bottom: 20px;
+}
+
+.tp-offcanvas-menu ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #111;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.tp-offcanvas-menu ul li a:hover {
+  color: #5758d6; /* Tu color corporativo */
+}
+
+/* Botón contacto */
+.tp-offcanvas-content .tp-btn {
+  display: block;
+  text-align: center;
+  background-color: #007f61;
+  color: #fff;
+  padding: 15px;
+  margin: 30px 0;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.tp-offcanvas-content .tp-btn:hover {
+  background-color: #005a48;
+}
+
+/* Info de contacto */
+.tp-offcanvas-content {
+  font-size: 14px;
+  color: #333;
+}
+
+.tp-offcanvas-content h4 {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.tp-offcanvas-content a {
+  color: #007f61;
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Redes sociales */
+.tp-offcanvas-content .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tp-offcanvas-content .social-icons a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  color: #111;
+  transition: background 0.3s;
+}
+
+.tp-offcanvas-content .social-icons a:hover {
+  background: #5758d6;
+  color: #fff;
+}
+
+/* Estilo para la sección de contacto en el offcanvas */
+.tp-offcanvas-contact {
+  padding: 30px 20px;
+  border-top: 1px solid #eee;
+}
+
+.tp-offcanvas-contact-info h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0b0b0b;
+  letter-spacing: 1px;
+}
+
+.tp-offcanvas-contact-info p {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #0b0b0b;
+  margin: 12px 0;
+}
+
+.tp-offcanvas-contact-info p i {
+  color: #007f61; /* Verde corporativo */
+  font-size: 18px;
+  margin-right: 12px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.tp-offcanvas-contact-info a {
+  color: #0b0b0b;
+  text-decoration: none;
+}
+
+.tp-offcanvas-contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para la sección de contacto */
+.tp-offcanvas-contact {
+  padding: 30px 20px;
+  border-top: 1px solid #eee;
+}
+
+.tp-offcanvas-contact-info h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0b0b0b;
+  letter-spacing: 1px;
+}
+
+.tp-offcanvas-contact-info p {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #0b0b0b;
+  margin: 12px 0;
+}
+
+.tp-offcanvas-contact-info p i {
+  color: #007f61; /* Verde */
+  font-size: 18px;
+  margin-right: 12px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.tp-offcanvas-contact-info a {
+  color: #0b0b0b;
+  text-decoration: none;
+}
+
+.tp-offcanvas-contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo de redes sociales */
+.tp-offcanvas-social {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.tp-offcanvas-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  color: #111;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.tp-offcanvas-social a:hover {
+  background: #007f61; /* Hover verde */
+  color: #fff;
+}
+
+/* Botón grande CONTACTANOS */
+.tp-header-btn-home {
+  margin: 20px 20px; /* Ajustamos margen inferior */
+}
+
+/* Sección de contacto */
+.tp-offcanvas-contact {
+  padding: 20px 20px 10px; /* Menos padding abajo */
+  border-top: 1px solid #eee;
+  margin-top: 20px; /* Antes no lo teníamos */
+}
+
+.tp-offcanvas-contact-info h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #0b0b0b;
+  letter-spacing: 1px;
+}
+
+.tp-offcanvas-contact-info p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #0b0b0b;
+  margin: 8px 0; /* Reducimos espacio entre líneas */
+}
+
+.tp-offcanvas-contact-info p i {
+  color: #007f61;
+  font-size: 18px;
+  margin-right: 10px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.tp-offcanvas-social {
+  margin-top: 20px; /* Menos separación */
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.tp-offcanvas-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  color: #111;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.tp-offcanvas-social a:hover {
+  background: #007f61;
+  color: #fff;
+}
+
+.tp-offcanvas-contact {
+  padding: 15px 20px 10px; /* Menos padding arriba */
+  border-top: 1px solid #eee;
+  margin-top: 10px; /* Subimos más todo */
+}
+
+.tp-offcanvas-contact-info h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #0b0b0b;
+  letter-spacing: 1px;
+}
+
+.tp-offcanvas-contact-info p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #0b0b0b;
+  margin: 8px 0;
+}
+
+.tp-offcanvas-contact-info p i {
+  color: #007f61;
+  font-size: 18px;
+  margin-right: 10px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.tp-offcanvas-social {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* ⬅️ Centramos las redes sociales */
+  gap: 10px;
+}
+
+.tp-offcanvas-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  color: #111;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.tp-offcanvas-social a:hover {
+  background: #007f61;
+  color: #fff;
+}
+
+/* --- Ajustes solo para mobile (max 768px) --- */
+@media (max-width: 768px) {
+  /* 1. Reducir tamaño de "Respondemos tus dudas" */
+  .section-title-2 h2 {
+    font-size: 32px; /* Ajustamos el tamaño a algo razonable */
+    line-height: 1.2;
+  }
+
+  /* 2. Ocultar todo menos el formulario en #contacto */
+  #contacto .contact-info-area,
+  #contacto .tp-contact__text,
+  #contacto .tp-contact__info {
+    display: none;
+  }
+
+  /* 3. Ajustar el formulario para que quede más limpio */
+  #contacto .tp-contact-form-area {
+    margin-top: 20px; /* Separación de arriba */
+    width: 100%; /* Que use todo el ancho */
+    padding: 0 20px; /* Un poco de espacio a los costados */
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1. Todos los H2 grandes en mobile se achican */
+  h2 {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* 2. Solo dejar formulario en #contacto */
+  #contacto .contact-info-area,
+  #contacto .tp-contact__text,
+  #contacto .tp-contact__info {
+    display: none;
+  }
+
+  /* 2. Solo dejar formulario en #contacto */
+  #contacto .contact-info-area,
+  #contacto .tp-contact__text,
+  #contacto .tp-contact__info,
+  #contacto .tp-cta-area {
+    display: none;
+  }
+
+  #contacto .tp-contact-form-area {
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mostrar solo el formulario en contacto */
+  #contacto .row > div:not(:last-child) {
+    display: none;
+  }
+
+  #contacto .col-xl-5 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Footer simple */
+.footer-simple {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #6c757d;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .tp-cta-area {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .tp-footer-area {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .tp-footer-copyright {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .tp-offcanvas-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* CENTRA TODO */
+    text-align: center; /* CENTRA TEXTOS */
+  }
+
+  .tp-offcanvas-contact-info {
+    margin-bottom: 0px;
+  }
+
+  .tp-offcanvas-contact-info p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #111;
+  }
+
+  .tp-offcanvas-contact-info i {
+    margin-right: 8px;
+    color: #007f61;
+  }
+
+  .tp-offcanvas-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .tp-offcanvas-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    color: #111;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .tp-offcanvas-social a:hover {
+    background: #007f61;
+    color: #fff;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-simple {
+    display: none !important;
+  }
+}

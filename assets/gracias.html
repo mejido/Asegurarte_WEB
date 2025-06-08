@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Gracias!</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 500px;
+    }
+    h2 {
+      color: #0077c8;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+      margin: 10px 0;
+    }
+    .footer {
+      font-size: 12px;
+      color: #777;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 id="saludo">¡Hola!</h2>
+    <p>Gracias por contactarte con <strong>Asegurarte</strong>.</p>
+    <p>Hemos recibido tu mensaje y uno de nuestros asesores se pondrá en contacto con vos a la brevedad.</p>
+    <p>¡Gracias por confiar en nosotros!</p>
+    <div class="footer">© 2025 Asegurarte. Todos los derechos reservados.</div>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nombre = params.get('nombre') || 'Usuario';
+    document.getElementById('saludo').textContent = '¡Hola ' + nombre + '!';
+  </script>
+</body>
+</html>

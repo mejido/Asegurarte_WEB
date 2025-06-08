@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Contacto con reCAPTCHA</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <h2>Formulario de Contacto</h2>
+  <form action="mail_captcha.php" method="post">
+    <input type="text" name="name" placeholder="Tu Nombre" required><br><br>
+    <input type="email" name="email" placeholder="Tu Email" required><br><br>
+    <input type="text" name="phone" placeholder="Tu Teléfono" required><br><br>
+    <div class="g-recaptcha" data-sitekey="AQUI_TU_SITE_KEY"></div><br>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
