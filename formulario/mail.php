@@ -14,7 +14,7 @@ try {
     $mail->Host       = 'smtp.mail.me.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'mejido@me.com';
-    $mail->Password   = 'lpio-fmws-gydo-dqad'; // App Password
+    $mail->Password   = '1234'; // App Password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
@@ -46,7 +46,7 @@ try {
     $mail_confirm->Host       = 'smtp.mail.me.com';
     $mail_confirm->SMTPAuth   = true;
     $mail_confirm->Username   = 'mejido@me.com';
-    $mail_confirm->Password   = 'lpio-fmws-gydo-dqad';
+    $mail_confirm->Password   = '1234';
     $mail_confirm->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail_confirm->Port       = 587;
 
